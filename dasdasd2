@@ -420,9 +420,6 @@ local files = {
     -- > ( custom drawing )
 
     local drawing = Drawing
-    LPH_NO_VIRTUALIZE(function()
-        drawing = _G.FORCE_REAL_DRAWING and Drawing or loadstring(readfile("juju recode/assets/api.lua"))()
-    end)()
 
     getgenv()["fake_drawing"] = drawing
 
